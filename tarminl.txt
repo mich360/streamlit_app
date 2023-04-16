@@ -1,0 +1,110 @@
+Last login: Sun Apr 16 16:35:41 on ttys000
+naomichimasumoto@naomichinoMacBook-Pro ~ % cd desktop
+naomichimasumoto@naomichinoMacBook-Pro desktop % cd python
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git config --global user.email "python3.supu_app.vtuber.n-masumoto@nifty.com"
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git config --global --list
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=mich360
+user.email=python3.supu_app.vtuber.n-masumoto@nifty.com
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git init
+Initialized empty Git repository in /Users/naomichimasumoto/Desktop/python/supu_app/.git/
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git add -A
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   data/blue.png
+	new file:   "data/\345\271\263\345\235\207\346\260\227\346\270\251.csv"
+	new file:   main_app.py
+	new file:   pages/page_1.py
+	new file:   pages/page_2.py
+	new file:   pages/page_3.py
+	new file:   requirements.txt
+
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git commit -m "first commit"
+[main (root-commit) 1387d14] first commit
+ 7 files changed, 157 insertions(+)
+ create mode 100644 data/blue.png
+ create mode 100644 "data/\345\271\263\345\235\207\346\260\227\346\270\251.csv"
+ create mode 100644 main_app.py
+ create mode 100644 pages/page_1.py
+ create mode 100644 pages/page_2.py
+ create mode 100644 pages/page_3.py
+ create mode 100644 requirements.txt
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git remote add origin git@github.com:mich360/streamlit_web_app.git
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git push -u origin main
+The authenticity of host 'github.com (20.27.177.113)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes      
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git push -u origin main                                                    
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git remote -v
+origin	git@github.com:mich360/streamlit_web_app.git (fetch)
+origin	git@github.com:mich360/streamlit_web_app.git (push)
+naomichimasumoto@naomichinoMacBook-Pro supu_app % git pull
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+naomichimasumoto@naomichinoMacBook-Pro supu_app % ls -al ~/.ssh
+
+total 8
+drwx------   3 naomichimasumoto  staff    96  4 16 17:44 .
+drwxr-x---+ 67 naomichimasumoto  staff  2144  4 16 17:44 ..
+-rw-r--r--   1 naomichimasumoto  staff    92  4 16 17:44 known_hosts
+naomichimasumoto@naomichinoMacBook-Pro supu_app % ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/naomichimasumoto/.ssh/id_rsa): main_app.py
+main_app.py already exists.
+Overwrite (y/n)? n
+naomichimasumoto@naomichinoMacBook-Pro supu_app % ;ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/naomichimasumoto/.ssh/id_rsa): m.py
+m.py already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in m.py
+Your public key has been saved in m.py.pub
+The key fingerprint is:
+SHA256:pPM9cAGjeXLUxUSvC+GuWJ5zbWN4j4Ge/I6Sncw0eUE your_email@example.com
+The key's randomart image is:
++---[RSA 4096]----+
+|        +. =+    |
+|       + o. E.   |
+|      + + o.  .  |
+|       * . o..   |
+|      o S +...   |
+|       o =+o..   |
+|        o*=*o    |
+|       ++=B+*o   |
+|      . ++=*+o.  |
++----[SHA256]-----+
+naomichimasumoto@naomichinoMacBook-Pro supu_app % pbcopy < ~/.ssh/id_rsa.pub
+
+zsh: no such file or directory: /Users/naomichimasumoto/.ssh/id_rsa.pub
+naomichimasumoto@naomichinoMacBook-Pro supu_app % ls -al ~/.ssh
+total 8
+drwx------   3 naomichimasumoto  staff    96  4 16 17:44 .
+drwxr-x---+ 67 naomichimasumoto  staff  2144  4 16 17:44 ..
+-rw-r--r--   1 naomichimasumoto  staff    92  4 16 17:44 known_hosts
+naomichimasumoto@naomichinoMacBook-Pro supu_app % 
