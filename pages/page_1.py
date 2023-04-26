@@ -2,7 +2,6 @@ import streamlit as st
 code = '''
 import streamlit as st
 from PIL import Image
-
 st.title('サンプルアプリ')
 st.header('ヘッダー')
 st.subheader('サブヘッダー')
