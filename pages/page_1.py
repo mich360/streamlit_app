@@ -11,6 +11,6 @@ st.caption('これはテストアプリです')
 image = Image.open('./data/blue.png')
 st.image(image, width=400)
 
-https://docs.streamlit.io/library/api-reference　　（公式サイト）
+# https://docs.streamlit.io/library/api-reference　　（公式サイト）
 '''
 st.code(code, language='python')
