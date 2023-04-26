@@ -3,7 +3,7 @@ from PIL import Image
 
 st.title('サンプルアプリ')
 st.header('ヘッダー')
-st.subheader('サブヘッダー')
+st.subheader('サブヘッダー'image = Image.open('./data/blue.png'))
 st.write('文字列　　') # markdown
 st.caption('これはテストアプリです')
            
