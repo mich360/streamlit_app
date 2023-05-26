@@ -1,4 +1,5 @@
 import streamlit as st
+st.write('メインページのコードです')
 code = '''
 import streamlit as st
 from PIL import Image
